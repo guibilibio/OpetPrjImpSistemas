@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<title>Opet App</title>
+	<meta charset="UTF-8"/>
+</head>
+<body>
+	<h1 align="center">Acesse sua conta</h1>
+	<div align="center">
+		<form method="post" action="/efetuarLogin" th:object="${pessoa}"> 
+			<input type="text" name="id" placeholder="Usuário"/>
+			</br>
+			</br>
+			<input type="password" name="senha" placeholder="Senha"/>
+			</br>
+			</br>
+			<input type="submit" value="Entrar" name="action"/>
+			</br>
+			<h3 th:text="${mensagem}" th:if="${mensagem != null}"></h3>
+		</form>
+	</div>
+</body>
+</html>
