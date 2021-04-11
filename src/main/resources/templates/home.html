@@ -2,12 +2,18 @@
 <html xmlns:th="http://thymeleaf.org"
 	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-	<title>Opet App</title>
+	<title>Home</title>
 	<meta charset="UTF-8"/>
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<script type="text/javascript" src="/js/style.css"> </script>
 </head>
 <body>
+	<header>
+	<spam th:text="${session.usuarioLogado.nome}"/>
+	</header>
 	<div align="center">
-		<h3 align="center">Login realizado com sucesso!</h3>
+		<h3 align="center">Bem-vindo!</h3>
+		<h3 align="center">Login realizado com sucesso.</h3>
 	</div>
 </body>
 </html>

@@ -4,12 +4,14 @@
 <head>
 	<title>Opet App</title>
 	<meta charset="UTF-8"/>
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<script type="text/javascript" src="/js/style.css"> </script>
 </head>
 <body>
-	<h1 align="center">Acesse sua conta</h1>
 	<div align="center">
-		<form method="post" action="/efetuarLogin" th:object="${pessoa}"> 
-			<input type="text" name="id" placeholder="Usuário"/>
+		<h1 align="center"> Acesse sua conta</h1>
+		<form method="post" action="/home" th:object="${pessoa}"> 
+			<input type="text" name="login" placeholder="Usuário"/>
 			</br>
 			</br>
 			<input type="password" name="senha" placeholder="Senha"/>
@@ -17,8 +19,17 @@
 			</br>
 			<input type="submit" value="Entrar" name="action"/>
 			</br>
-			<h3 th:text="${mensagem}" th:if="${mensagem != null}"></h3>
+			<h3 th:text="${mensagem}" th:if="${mensagem != null}" class="erro_msg"></h3>
 		</form>
 	</div>
+	<form action="/cadastro">
+			<div align="center">
+				</br></br></br>
+				<h3 align="center"> Não possui acesso ? </h3>
+				<input type="submit" value="Cadastrar-se" name="action">
+			</div>
+	</form>
+
+	
 </body>
 </html>
