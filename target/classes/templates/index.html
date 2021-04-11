@@ -5,20 +5,23 @@
 	<title>Opet App</title>
 	<meta charset="UTF-8"/>
 	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<!-- Bootstrap CSS -->
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 	<script type="text/javascript" src="/js/style.css"> </script>
 </head>
 <body>
 	<div align="center">
+		</br></br></br></br></br>
 		<h1 align="center"> Acesse sua conta</h1>
+		</br>
 		<form method="post" action="/home" th:object="${pessoa}"> 
-			<input type="text" name="login" placeholder="Usuário"/>
+			<input type="text" name="login" placeholder="Usuário" required="required"/>
+			</br></br>
+			<input type="password" name="senha" placeholder="Senha" required="required"/>
 			</br>
 			</br>
-			<input type="password" name="senha" placeholder="Senha"/>
-			</br>
-			</br>
-			<input type="submit" value="Entrar" name="action"/>
-			</br>
+			<input type="submit" value="Fazer login" name="action" class="btn btn-light"/>
+			</br></br>
 			<h3 th:text="${mensagem}" th:if="${mensagem != null}" class="erro_msg"></h3>
 		</form>
 	</div>
@@ -26,7 +29,7 @@
 			<div align="center">
 				</br></br></br>
 				<h3 align="center"> Não possui acesso ? </h3>
-				<input type="submit" value="Cadastrar-se" name="action">
+				<input type="submit" value="Cadastrar-se" name="action" class="btn btn-light"/>
 			</div>
 	</form>
 
