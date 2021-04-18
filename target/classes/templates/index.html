@@ -12,15 +12,15 @@
 <body>
 	<div align="center">
 		</br></br></br></br></br>
-		<h1 align="center"> Acesse sua conta</h1>
-		</br>
-		<form method="post" action="/home" th:object="${pessoa}"> 
-			<input type="text" name="login" placeholder="Usuário" required="required"/>
+		<h2 align="center">Olá, seja bem vindo!</h2></br>
+		<h3 align="center" class="index-text">Indentifique-se</h3>
+		<form method="post" action="/home" th:object="${pessoa}" > 
+			<input type="text" name="login" placeholder="Login" required="required"/>
 			</br></br>
 			<input type="password" name="senha" placeholder="Senha" required="required"/>
 			</br>
 			</br>
-			<input type="submit" value="Fazer login" name="action" class="btn btn-light"/>
+			<input type="submit" value="Entrar" name="action" class="btn btn-light"/>
 			</br></br>
 			<h3 th:text="${mensagem}" th:if="${mensagem != null}" class="erro_msg"></h3>
 		</form>

@@ -1,6 +1,8 @@
 package opet.edu.br.opetApp.models;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,6 +11,7 @@ import javax.persistence.Table;
 public class Curso {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id_curso;
 	private String des_curso;
 
@@ -16,6 +19,10 @@ public class Curso {
 		super();
 		this.id_curso = id_curso;
 		this.des_curso = des_curso;
+	}
+	
+	public Curso() {
+		
 	}
 
 	public int getId_curso() {
