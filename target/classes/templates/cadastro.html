@@ -26,11 +26,14 @@
 				</br></br>
 				<input type="number" name="periodo" placeholder="Período Ex: 1" />
 				</br></br>
-				<select name="id_cursos">
+				<select name="id_curso">
 				<option>Escolha seu curso</option>
-				<option th:each="curso : ${cursos}" 
-							th:value="${curso.id_curso}"
-							th:text="${curso.des_curso}">
+				<option value="1">Análise e Desen. de Sistemas</option>
+				<option value="2">Fisioterapia</option>
+				<option value="3">Direito</option>
+				<option value="4">Eng. Mecânica</option>
+				<option value="5">Farmácia</option>
+				<option value="6">Administração</option>
 				</option>
 				</select>	
 				</br></br>
